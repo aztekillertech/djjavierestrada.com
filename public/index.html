@@ -42,6 +42,8 @@
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(14,10,5,.55) 0%, rgba(14,10,5,.78) 60%, var(--dark) 100%)}
   .hero h1{font-size:clamp(44px,10vw,118px);font-weight:900;text-shadow:0 4px 40px rgba(0,0,0,.7)}
   .hero h1 .b{display:block;color:var(--gold)}
+  .hero-logo{width:min(760px,93vw);height:auto;display:block;margin:6px auto 0;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5))}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   .hero .tag{font-size:clamp(15px,2.3vw,20px);max-width:600px;margin:22px auto 0;font-weight:300;color:#efe2d2}
   .hero .tag b{color:var(--gold2);font-weight:600}
   .cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px}
@@ -120,7 +122,8 @@
 
   <header class="hero">
     <p class="eyebrow">Monterrey, México</p>
-    <h1>DJ JAVIER<span class="b">ESTRADA</span></h1>
+    <img class="hero-logo" src="assets/logo.png" alt="DJ Javier Estrada" width="740">
+    <h1 class="sr-only">DJ Javier Estrada</h1>
     <p class="tag">Pionero del <b>tribal prehispánico</b> y el <b>moombahton</b> en México. Después de <b>10 años</b>, el regreso — del inframundo al renacer.</p>
     <div class="cta">
       <a class="btn btn-gold" href="https://djjavierestrada.bandcamp.com" target="_blank" rel="noopener">▶ Escuchar en Bandcamp</a>
