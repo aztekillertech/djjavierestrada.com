@@ -12,17 +12,17 @@
 <meta name="theme-color" content="#0e0a05">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --gold:#f2a93b; --gold2:#e8822e; --cream:#f3e7d8; --muted:#a98f74;
+    --gold:#f2a93b; --gold2:#e8822e; --cream:#f3e7d8; --muted:#a98f74; --teal:#2a9d8f;
     --dark:#0e0a05; --dark2:#161009; --panel:#1c130b; --line:#3a2a1a;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:'Inter',system-ui,sans-serif;color:var(--cream);background:var(--dark);line-height:1.6;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
-  h1,h2,h3{font-family:'Cinzel',serif;font-weight:700;line-height:1.05;letter-spacing:.02em}
+  h1,h2,h3{font-family:'Rye',serif;font-weight:700;line-height:1.05;letter-spacing:.02em}
   section{padding:90px 22px;position:relative}
   .wrap{max-width:1080px;margin:0 auto}
   .eyebrow{letter-spacing:.45em;font-size:11px;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:14px}
@@ -30,7 +30,7 @@
 
   nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
     padding:16px 26px;background:rgba(14,10,5,.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(58,42,26,.5);transition:.3s}
-  nav .logo{font-family:'Cinzel',serif;font-weight:900;font-size:17px;letter-spacing:.1em}
+  nav .logo{font-family:'Rye',serif;font-weight:900;font-size:17px;letter-spacing:.1em}
   nav .logo b{color:var(--gold)}
   nav .links{display:flex;gap:26px;font-size:13.5px;font-weight:500;letter-spacing:.03em}
   nav .links a{color:var(--cream);opacity:.8;transition:.2s}
@@ -71,14 +71,17 @@
   .bio p b{color:var(--cream);font-weight:600}
   .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
-  .stat .n{font-family:'Cinzel',serif;font-size:26px;color:var(--gold);font-weight:700}
+  .stat .n{font-family:'Rye',serif;font-size:26px;color:var(--gold);font-weight:700}
   .stat .l{font-size:12px;color:var(--muted);margin-top:2px}
 
   .creds{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
   .cred{background:var(--panel);border:1px solid var(--line);border-radius:30px;padding:10px 20px;font-size:13.5px;font-weight:500;color:#e7d8c5;transition:.2s}
   .cred:hover{border-color:var(--gold);color:var(--gold)}
   .section-head{text-align:center;margin-bottom:40px}
+  .section-head::before,.section-head::after{content:"";display:block;width:min(580px,90vw);height:46px;margin:12px auto;background:url('assets/banda.png') center/contain no-repeat;mix-blend-mode:lighten}
   .section-head h2{font-size:clamp(28px,5vw,44px)}
+  .section-head h2::before{content:"\276F\276F\276F  ";color:var(--teal);font-family:'Inter',sans-serif;font-size:.5em;font-weight:700;vertical-align:middle}
+  .section-head h2::after{content:"  \276E\276E\276E";color:var(--teal);font-family:'Inter',sans-serif;font-size:.5em;font-weight:700;vertical-align:middle}
 
   .tracks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:10px}
   .trk{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.2s}
@@ -90,7 +93,7 @@
   .embed{max-width:680px;margin:0 auto;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 
   .contact{text-align:center}
-  .contact .mail{font-family:'Cinzel',serif;font-size:clamp(18px,4vw,32px);color:var(--gold);margin:18px 0;display:inline-block;word-break:break-all}
+  .contact .mail{font-family:'Rye',serif;font-size:clamp(18px,4vw,32px);color:var(--gold);margin:18px 0;display:inline-block;word-break:break-all}
   .socials{display:flex;gap:22px;justify-content:center;margin-top:24px;font-size:14px;font-weight:500;letter-spacing:.03em;flex-wrap:wrap}
   .socials a{color:var(--cream);opacity:.85;transition:.2s}
   .socials a:hover{opacity:1;color:var(--gold)}
@@ -227,8 +230,10 @@
 
   <section id="contacto">
     <div class="wrap contact reveal">
-      <p class="eyebrow">Contrataciones</p>
-      <h2 style="font-size:clamp(28px,5vw,44px)">Booking & <span class="gold">Contacto</span></h2>
+      <div class="section-head">
+        <p class="eyebrow">Contrataciones</p>
+        <h2>Booking & <span class="gold">Contacto</span></h2>
+      </div>
       <a class="mail" href="mailto:javierestradabookings@gmail.com">javierestradabookings@gmail.com</a>
       <div class="cta" style="justify-content:center">
         <a class="btn btn-gold" href="mailto:javierestradabookings@gmail.com?subject=Booking%20DJ%20Javier%20Estrada">Solicitar fecha</a>
